@@ -1,6 +1,8 @@
 <x-layouts.app title="Ajouter un jeu">
-    <h1>Ajouter un jeu</h1>
-    <p>Le jeu rejoint le catalogue dès l'enregistrement.</p>
+    <div class="mb-8">
+     <h1 class="text-3xl font-semibold tracking-tight">Ajouter un jeu</h1>
+    <p class="mt-2 text-zinc-600">Le jeu rejoint le catalogue dès l'enregistrement.</p>
+    </div>
 
     <form method="POST" action="{{ route('games.store') }}">
         @csrf
@@ -47,7 +49,8 @@
         </div>
 
         <div>
-            <button type="submit">Ajouter le jeu</button>
+           <x-button type="submit">Ajouter le jeu</x-button>
+
             <a href="{{ route('games.index') }}">Annuler</a>
         </div>
     </form>
